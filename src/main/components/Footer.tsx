@@ -72,7 +72,7 @@ export default function Footer() {
               rel="noopener noreferrer">
               Privacy Policy
             </a>
-            <a href="/terms-and-conditions.pdf"
+            <a href="/terms&conditions.pdf"
               target="_blank"
               rel="noopener noreferrer">
               Terms & Conditions
