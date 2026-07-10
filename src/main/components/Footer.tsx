@@ -6,10 +6,7 @@ export default function Footer() {
       <div className="container-x">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <a
-              href="#top"
-              className="flex items-center gap-2 font-semibold tracking-tight"
-            >
+            <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm">
                 ◆
               </span>
@@ -20,8 +17,8 @@ export default function Footer() {
             </a>
 
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              Premium websites for ambitious local businesses. Designed and
-              built by one developer who cares.
+              Premium websites for ambitious local businesses. Designed and built by one developer
+              who cares.
             </p>
           </div>
 
@@ -68,9 +65,20 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <span>
-            © {new Date().getFullYear()} RD Studio. All rights reserved.
-          </span>
+          <span>© {new Date().getFullYear()} RD Studio. All rights reserved.</span>
+          <div className="flex gap-4">
+            <a href="/Privacy-Policy.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              Privacy Policy
+            </a>
+            <a href="/Terms&Conditions.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              Terms & Conditions
+            </a>
+          </div>
+
 
           <span>Handcrafted with care.</span>
         </div>

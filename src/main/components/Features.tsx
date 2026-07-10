@@ -40,9 +40,7 @@ export default function Features() {
                   <feature.icon className="h-5 w-5" />
                 </span>
 
-                <span className="text-sm font-semibold">
-                  {feature.title}
-                </span>
+                <span className="text-sm font-semibold">{feature.title}</span>
               </div>
             </Reveal>
           ))}

@@ -1,11 +1,4 @@
-import {
-  Headphones,
-  Palette,
-  Rocket,
-  Search,
-  Smartphone,
-  Sparkles,
-} from "lucide-react";
+import { Headphones, Palette, Rocket, Search, Smartphone, Sparkles } from "lucide-react";
 
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
@@ -60,13 +53,9 @@ export default function Why() {
                   <why.icon className="h-5 w-5" />
                 </span>
 
-                <h3 className="mt-5 text-lg font-semibold">
-                  {why.title}
-                </h3>
+                <h3 className="mt-5 text-lg font-semibold">{why.title}</h3>
 
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {why.desc}
-                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{why.desc}</p>
               </div>
             </Reveal>
           ))}

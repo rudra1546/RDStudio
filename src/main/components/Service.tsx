@@ -47,10 +47,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="py-24 md:py-32 bg-subtle/60 border-y border-border"
-    >
+    <section id="services" className="py-24 md:py-32 bg-subtle/60 border-y border-border">
       <div className="container-x">
         <SectionHeader
           eyebrow="Services"
@@ -66,22 +63,17 @@ export default function Services() {
                   <service.icon className="h-5 w-5" />
                 </div>
 
-                <h3 className="mt-6 text-xl font-semibold">
-                  {service.title}
-                </h3>
+                <h3 className="mt-6 text-xl font-semibold">{service.title}</h3>
 
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  {service.desc}
-                </p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
 
                 <a
                   href="#work"
                   className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-foreground/80 group-hover:text-accent transition-colors"
-                  >
+                >
                   Learn more
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
-              
               </div>
             </Reveal>
           ))}

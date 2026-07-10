@@ -1,11 +1,4 @@
-import {
-  Globe,
-  Rocket,
-  CalendarCheck,
-  Sparkles,
-  Palette,
-  LifeBuoy,
-} from "lucide-react";
+import { Globe, Rocket, CalendarCheck, Sparkles, Palette, LifeBuoy } from "lucide-react";
 
 export const services = [
   {

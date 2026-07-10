@@ -29,10 +29,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-subtle: var(--subtle);
 
-  --shadow-elegant: 0 1px 2px rgba(15, 23, 42, 0.04),
-    0 8px 24px -8px rgba(15, 23, 42, 0.08);
-  --shadow-lift: 0 4px 8px rgba(15, 23, 42, 0.04),
-    0 24px 48px -16px rgba(15, 23, 42, 0.16);
+  --shadow-elegant: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(15, 23, 42, 0.08);
+  --shadow-lift: 0 4px 8px rgba(15, 23, 42, 0.04), 0 24px 48px -16px rgba(15, 23, 42, 0.16);
 }
 
 :root {
@@ -40,9 +38,9 @@
 
   /* Neutral premium palette */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.02 260);       /* charcoal */
+  --foreground: oklch(0.22 0.02 260); /* charcoal */
   --muted: oklch(0.97 0.005 260);
-  --muted-foreground: oklch(0.5 0.02 260);  /* dark gray */
+  --muted-foreground: oklch(0.5 0.02 260); /* dark gray */
   --subtle: oklch(0.985 0.004 260);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.22 0.02 260);
@@ -51,9 +49,9 @@
   --ring: oklch(0.55 0.14 250);
 
   /* Single accent: refined blue */
-  --primary: oklch(0.22 0.02 260);          /* charcoal button */
+  --primary: oklch(0.22 0.02 260); /* charcoal button */
   --primary-foreground: oklch(0.99 0 0);
-  --accent: oklch(0.55 0.14 250);           /* subtle blue accent */
+  --accent: oklch(0.55 0.14 250); /* subtle blue accent */
   --accent-foreground: oklch(0.99 0 0);
 }
 
@@ -72,7 +70,10 @@
     text-rendering: optimizeLegibility;
     font-feature-settings: "ss01", "cv11";
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
@@ -107,7 +108,10 @@
   color: var(--color-primary-foreground);
   font-weight: 600;
   font-size: 0.95rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
   box-shadow: var(--shadow-elegant);
   &:hover {
     transform: translateY(-1px);
@@ -128,7 +132,10 @@
   font-weight: 600;
   font-size: 0.95rem;
   background: transparent;
-  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
   &:hover {
     border-color: var(--color-foreground);
     background: var(--color-subtle);
@@ -140,7 +147,10 @@
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 1.25rem;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
   &:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lift);

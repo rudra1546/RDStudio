@@ -6,13 +6,7 @@ type FieldProps = {
   required?: boolean;
 };
 
-export default function Field({
-  label,
-  name,
-  type = "text",
-  placeholder,
-  required,
-}: FieldProps) {
+export default function Field({ label, name, type = "text", placeholder, required }: FieldProps) {
   return (
     <label className="block">
       <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">

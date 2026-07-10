@@ -1,11 +1,4 @@
-import {
-  Palette,
-  Sparkles,
-  Rocket,
-  Smartphone,
-  Search,
-  Headphones,
-} from "lucide-react";
+import { Palette, Sparkles, Rocket, Smartphone, Search, Headphones } from "lucide-react";
 
 export const whys = [
   {

@@ -6,10 +6,7 @@ type CounterProps = {
   suffix?: string;
 };
 
-export default function Counter({
-  to,
-  suffix = "",
-}: CounterProps) {
+export default function Counter({ to, suffix = "" }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
 
   const inView = useInView(ref, {
@@ -24,10 +21,7 @@ export default function Counter({
     damping: 20,
   });
 
-  const rounded = useTransform(
-    spring,
-    (value) => Math.round(value).toString() + suffix
-  );
+  const rounded = useTransform(spring, (value) => Math.round(value).toString() + suffix);
 
   const [text, setText] = useState("0" + suffix);
 

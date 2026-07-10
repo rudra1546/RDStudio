@@ -6,15 +6,10 @@ type FooterColProps = {
   }[];
 };
 
-export default function FooterCol({
-  title,
-  items,
-}: FooterColProps) {
+export default function FooterCol({ title, items }: FooterColProps) {
   return (
     <div>
-      <h4 className="text-sm font-semibold">
-        {title}
-      </h4>
+      <h4 className="text-sm font-semibold">{title}</h4>
 
       <ul className="mt-4 space-y-2.5">
         {items.map((item) => (

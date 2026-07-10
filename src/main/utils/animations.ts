@@ -11,7 +11,7 @@ export const fadeUp = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: EASE as unknown as number[],
+      ease: EASE as unknown as [number, number, number, number],
       delay: i * 0.06,
     },
   }),

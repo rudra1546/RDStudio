@@ -6,24 +6,14 @@ export const projects = [
     name: "Bloom Salon & Spa",
     category: "Salon Website",
     image: salonShot,
-    features: [
-      "Modern UI",
-      "Online Booking",
-      "WhatsApp Integration",
-      "Fully Responsive",
-    ],
+    features: ["Modern UI", "Online Booking", "WhatsApp Integration", "Fully Responsive"],
     demo: "#",
   },
   {
     name: "Iron Peak Fitness",
     category: "Gym Website",
     image: gymShot,
-    features: [
-      "Membership Plans",
-      "Trainer Profiles",
-      "Contact Forms",
-      "Mobile Optimized",
-    ],
+    features: ["Membership Plans", "Trainer Profiles", "Contact Forms", "Mobile Optimized"],
     demo: "#",
   },
 ];

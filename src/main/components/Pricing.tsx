@@ -72,30 +72,21 @@ export default function Pricing() {
                   </span>
                 )}
 
-                <h3 className="text-xl font-semibold">
-                  {plan.name}
-                </h3>
+                <h3 className="text-xl font-semibold">{plan.name}</h3>
 
                 <p
                   className={`mt-1 text-sm ${
-                    plan.popular
-                      ? "text-background/70"
-                      : "text-muted-foreground"
+                    plan.popular ? "text-background/70" : "text-muted-foreground"
                   }`}
                 >
                   {plan.tagline}
                 </p>
 
-                <div className="mt-6 text-4xl font-bold tracking-tight">
-                  {plan.price}
-                </div>
+                <div className="mt-6 text-4xl font-bold tracking-tight">{plan.price}</div>
 
                 <ul className="mt-6 space-y-3">
                   {plan.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-start gap-2.5 text-sm"
-                    >
+                    <li key={feature} className="flex items-start gap-2.5 text-sm">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                       <span>{feature}</span>
                     </li>
@@ -117,9 +108,10 @@ export default function Pricing() {
             </Reveal>
           ))}
         </div>
-            <div className="text-center text-sm text-muted-foreground">
-              Note: Domain and hosting charges are not included. Domain purchase and hosting setup will be provided separately based on client requirements.
-            </div>
+        <div className="text-center text-sm text-muted-foreground">
+          Note: Domain and hosting charges are not included. Domain purchase and hosting setup will
+          be provided separately based on client requirements.
+        </div>
       </div>
     </section>
   );

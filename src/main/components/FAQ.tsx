@@ -49,9 +49,7 @@ export default function FAQ() {
               return (
                 <Reveal key={faq.q} delay={index}>
                   <button
-                    onClick={() =>
-                      setOpen(isOpen ? null : index)
-                    }
+                    onClick={() => setOpen(isOpen ? null : index)}
                     className="w-full text-left py-6 flex items-start justify-between gap-6 group"
                   >
                     <span className="text-base md:text-lg font-semibold group-hover:text-accent transition-colors">
@@ -60,24 +58,18 @@ export default function FAQ() {
 
                     <ChevronDown
                       className={`h-5 w-5 shrink-0 mt-1 transition-transform duration-300 ${
-                        isOpen
-                          ? "rotate-180 text-accent"
-                          : "text-muted-foreground"
+                        isOpen ? "rotate-180 text-accent" : "text-muted-foreground"
                       }`}
                     />
                   </button>
 
                   <div
                     className={`grid transition-all duration-300 ease-out ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100 pb-6"
-                        : "grid-rows-[0fr] opacity-0"
+                      isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-muted-foreground max-w-prose">
-                        {faq.a}
-                      </p>
+                      <p className="text-muted-foreground max-w-prose">{faq.a}</p>
                     </div>
                   </div>
                 </Reveal>
