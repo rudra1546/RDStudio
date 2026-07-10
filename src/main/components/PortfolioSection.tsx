@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 
 import salonShot from "@/assets/black-crown.png";
-import gymShot from "@/assets/titan-forge.png";
+import gymShot from "@/assets/Titan-forge.png";
 import spaShot from "@/assets/aura-spa.png";
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
