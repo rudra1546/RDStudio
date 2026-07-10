@@ -67,12 +67,12 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <span>© {new Date().getFullYear()} RD Studio. All rights reserved.</span>
           <div className="flex gap-4">
-            <a href="/Privacy-Policy.pdf"
+            <a href="/privacy-policy.pdf"
               target="_blank"
               rel="noopener noreferrer">
               Privacy Policy
             </a>
-            <a href="/Terms&Conditions.pdf"
+            <a href="/terms-and-conditions.pdf"
               target="_blank"
               rel="noopener noreferrer">
               Terms & Conditions
