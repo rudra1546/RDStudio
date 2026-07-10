@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Business",
-    price: "₹8,999 – ₹11,999",
+    price: "₹7,999 – ₹11,999",
     tagline: "For growing local businesses.",
     features: [
       "Up to 5 pages",
@@ -33,7 +33,7 @@ const plans = [
   },
   {
     name: "Custom",
-    price: "₹14,999+",
+    price: "₹11,999+",
     tagline: "For businesses that need a fully customized website.",
     features: [
       "Unlimited pages",
