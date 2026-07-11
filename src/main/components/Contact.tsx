@@ -70,8 +70,8 @@ export default function Contact() {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "rudra15406@gmail.com",
-                  href: "mailto:rudra15406@gmail.com",
+                  value: "rudra@therdstudio.co.in",
+                  href: "mailto:rudra@therdstudio.co.in",
                 },
                 {
                   icon: MessageCircle,

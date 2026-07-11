@@ -45,8 +45,8 @@ export default function Footer() {
             title="Contact"
             items={[
               {
-                label: "rudra15406@gmail.com",
-                href: "mailto:rudra15406@gmail.com",
+                label: "rudra@therdstudio.co.in",
+                href: "mailto:rudra@therdstudio.co.in",
               },
               {
                 label: "WhatsApp",
