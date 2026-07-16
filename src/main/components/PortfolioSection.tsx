@@ -1,7 +1,8 @@
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 
 import salonShot from "@/assets/black-crown.png";
-import gymShot from "@/assets/titan-forge.png";
+// import gymShot from "@/assets/titan-forge.png";
+import cafeShot from "@/assets/brew-haven-shot.png";
 import spaShot from "@/assets/aura-spa.png";
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
@@ -22,12 +23,12 @@ const projects = [
     demo: "https://aura-spa-design-mauve.vercel.app/",
   },
   {
-    name: "Titan Forge",
-    category: "Gym Website",
-    image: gymShot,
-    features: ["Membership Plans", "Trainer Profiles", "Contact Forms", "Mobile Optimized"],
-    demo: "https://titan-forge-livid.vercel.app/",
-  },
+  name: "Brew Haven",
+  category: "Café Website",
+  image: cafeShot,
+  features: ["Online Reservations", "Digital Menu", "Admin Dashboard", "Mobile Optimized"],
+  demo: "https://brew-heaven-nu.vercel.app/",
+}
 ];
 
 export default function PortfolioSection() {
