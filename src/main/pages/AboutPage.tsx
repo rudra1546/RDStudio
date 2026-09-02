@@ -1,5 +1,4 @@
 import About from "../components/About";
-import Why from "../components/Why";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Reveal from "../components/Reveal";
@@ -8,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="pt-16 md:pt-20">
       <About />
-      <Why />
+
       <section className="py-20 bg-background border-t border-border">
         <div className="container-x text-center max-w-2xl mx-auto">
           <Reveal>
