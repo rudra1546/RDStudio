@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import heroMockup from "@/assets/hero-mockup.png";
-
+import AnimatedLaptop from "./AnimatedLaptop";
 import Counter from "./Counter";
 import Reveal from "./Reveal";
 
@@ -54,19 +53,8 @@ export default function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={2} className="mt-16">
-          <div className="relative mx-auto max-w-5xl">
-            <div className="absolute inset-x-10 -bottom-6 h-24 rounded-[3rem] bg-[#8B5CF6]/15 blur-2xl" />
-            <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8)]">
-              <img
-                src={heroMockup}
-                alt="Premium laptop and mobile mockup of a business website"
-                width={1600}
-                height={1200}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
+        <Reveal delay={2} className="mt-10 sm:mt-14 md:mt-16">
+          <AnimatedLaptop />
         </Reveal>
 
         <Reveal delay={3} className="mt-20">
