@@ -11,6 +11,7 @@ import {
 
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
+import SpotlightCard from "./SpotlightCard";
 
 const features = [
   { icon: Smartphone, title: "Mobile Responsive" },
@@ -35,13 +36,16 @@ export default function Features() {
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
           {features.map((feature, index) => (
             <Reveal key={feature.title} delay={index}>
-              <div className="card-elegant p-6 flex flex-col items-start gap-4 h-full">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+              <SpotlightCard
+                enableTilt={true}
+                className="p-6 flex flex-col items-start gap-4 h-full"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent border border-accent/20">
                   <feature.icon className="h-5 w-5" />
                 </span>
 
                 <span className="text-sm font-semibold">{feature.title}</span>
-              </div>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>

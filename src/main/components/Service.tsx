@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
   CalendarCheck,
@@ -10,13 +11,13 @@ import {
 
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
+import SpotlightCard from "./SpotlightCard";
 
 const services = [
   {
     icon: Globe,
     title: "Business Websites",
     desc: "Trustworthy, modern sites that establish your brand and drive inquiries.",
-    href: "/services/business-websites",
   },
   {
     icon: Rocket,
@@ -58,8 +59,8 @@ export default function Services() {
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, index) => (
             <Reveal key={service.title} delay={index}>
-              <div className="card-elegant group h-full p-7">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-foreground text-background transition-colors group-hover:bg-accent">
+              <SpotlightCard enableTilt={true} className="group h-full p-7">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent border border-accent/20 transition-all group-hover:bg-accent group-hover:text-white group-hover:shadow-[0_4px_14px_rgba(139,92,246,0.3)]">
                   <service.icon className="h-5 w-5" />
                 </div>
 
@@ -67,14 +68,14 @@ export default function Services() {
 
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
 
-                <a
-                  href="#work"
+                <Link
+                  to="/services"
                   className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-foreground/80 group-hover:text-accent transition-colors"
                 >
                   Learn more
                   <ArrowUpRight className="h-4 w-4" />
-                </a>
-              </div>
+                </Link>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>

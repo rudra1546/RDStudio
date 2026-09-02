@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 import heroMockup from "@/assets/hero-mockup.png";
@@ -13,7 +14,7 @@ export default function Hero() {
         className="pointer-events-none absolute -top-40 left-1/2 h-[40rem] w-[80rem] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, color-mix(in oklab, var(--color-accent) 22%, transparent), transparent)",
+            "radial-gradient(closest-side, rgba(139, 92, 246, 0.14), rgba(99, 102, 241, 0.05), transparent)",
         }}
       />
 
@@ -30,7 +31,7 @@ export default function Hero() {
               <span className="relative whitespace-nowrap">
                 {" "}
                 grow{" "}
-                <span className="absolute inset-x-0 bottom-1 -z-10 h-3 rounded-full bg-accent/20" />
+                <span className="absolute inset-x-0 bottom-1 -z-10 h-3 rounded-full bg-[#8B5CF6]/20" />
               </span>
               your business.
             </h1>
@@ -41,24 +42,25 @@ export default function Hero() {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <a href="#work" className="btn-primary">
+              <Link to="/projects" className="btn-primary">
                 View my work
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
 
-              <a href="#contact" className="btn-ghost">
+              <Link to="/contact" className="btn-ghost">
                 Get a free quote
-              </a>
+              </Link>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={2} className="mt-16">
           <div className="relative mx-auto max-w-5xl">
-            <div className="absolute inset-x-10 -bottom-6 h-24 rounded-[3rem] bg-foreground/10 blur-2xl" />
-            <div className="relative overflow-hidden rounded-2xl border border-border bg-subtle">
+            <div className="absolute inset-x-10 -bottom-6 h-24 rounded-[3rem] bg-[#8B5CF6]/15 blur-2xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-[0_20px_50px_-15px_rgba(0,0,0,0.8)]">
               <img
-                src={heroMockup} alt="Premium laptop and mobile mockup of a business website"
+                src={heroMockup}
+                alt="Premium laptop and mobile mockup of a business website"
                 width={1600}
                 height={1200}
                 className="w-full h-auto object-cover"
@@ -66,6 +68,7 @@ export default function Hero() {
             </div>
           </div>
         </Reveal>
+
         <Reveal delay={3} className="mt-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[

@@ -18,7 +18,7 @@ export default function Field({ label, name, type = "text", placeholder, require
         type={type}
         required={required}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-xl border border-input bg-subtle/60 px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
+        className="mt-2 w-full rounded-xl border border-input bg-muted px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
       />
     </label>
   );

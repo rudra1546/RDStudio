@@ -21,32 +21,32 @@ export default function Contact() {
     if (!form.current) return;
 
     emailjs
-  .sendForm("service_cucvjm5", "template_45pz0fo", form.current, {
-    publicKey: "5FT4Q45WvQqpHvAiy",
-  })
-  .then(
-    () => {
-      setPopupType("success");
-      setSubmitted(true);
+      .sendForm("service_cucvjm5", "template_45pz0fo", form.current, {
+        publicKey: "5FT4Q45WvQqpHvAiy",
+      })
+      .then(
+        () => {
+          setPopupType("success");
+          setSubmitted(true);
 
-      setTimeout(() => {
-        setSubmitted(false);
-        setMessage(null);
-      }, 3000);
-    },
+          setTimeout(() => {
+            setSubmitted(false);
+            setMessage(null);
+          }, 3000);
+        },
 
-    (error) => {
-      console.log(error.text);
+        (error) => {
+          console.log(error.text);
 
-      setPopupType("error");
-      setSubmitted(true);
+          setPopupType("error");
+          setSubmitted(true);
 
-      setTimeout(() => {
-        setSubmitted(false);
-        setMessage(null);
-      }, 3000);
-    },
-  );
+          setTimeout(() => {
+            setSubmitted(false);
+            setMessage(null);
+          }, 3000);
+        },
+      );
   };
   return (
     <>
@@ -83,9 +83,9 @@ export default function Contact() {
                 <a
                   key={contact.label}
                   href={contact.href}
-                  className="group flex items-center gap-4 rounded-xl border border-border bg-background p-4 hover:border-foreground transition-colors"
+                  className="group flex items-center gap-4 rounded-xl border border-border bg-gradient-to-b from-[#171622] to-[#13131A] p-4 hover:border-accent hover:shadow-[0_8px_24px_-4px_rgba(139,92,246,0.25),inset_0_1px_1px_rgba(245,243,255,0.08)] transition-all duration-300"
                 >
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-foreground text-background group-hover:bg-accent transition-colors">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent/10 text-accent border border-accent/20 group-hover:bg-accent group-hover:text-white transition-all">
                     <contact.icon className="h-5 w-5" />
                   </span>
 
@@ -104,11 +104,10 @@ export default function Contact() {
           </div>
 
           <Reveal delay={1} className="lg:col-span-3">
-
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="rounded-2xl border border-border bg-background p-6 md:p-8 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.2)]"
+              className="rounded-2xl border border-border bg-gradient-to-b from-[#171622]/95 via-[#13131A] to-[#0F0E17] p-6 md:p-8 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.9),inset_0_1px_1px_rgba(245,243,255,0.08)]"
             >
               <div className="grid sm:grid-cols-2 gap-4">
                 <Field label="Your name" name="name" placeholder="Jane Doe" required />
@@ -136,7 +135,7 @@ export default function Contact() {
                   rows={5}
                   name="message"
                   placeholder="A short description of your business, goals, and timeline."
-                  className="mt-2 w-full rounded-xl border border-input bg-subtle/60 px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
+                  className="mt-2 w-full rounded-xl border border-input bg-muted px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                 />
               </div>
 
@@ -151,15 +150,10 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-
           </Reveal>
         </div>
       </section>
-      <GreetingAnimation
-        show={submitted}
-        type={popupType}
-      />
+      <GreetingAnimation show={submitted} type={popupType} />
     </>
-
   );
 }

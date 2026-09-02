@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 
 import salonShot from "@/assets/black-crown.png";
@@ -6,6 +7,7 @@ import cafeShot from "@/assets/brew-haven-shot.png";
 import spaShot from "@/assets/aura-spa.png";
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
+import SpotlightCard from "./SpotlightCard";
 
 const projects = [
   {
@@ -13,22 +15,22 @@ const projects = [
     category: "Salon Website",
     image: salonShot,
     features: ["Modern UI", "Online Booking", "WhatsApp Integration", "Fully Responsive"],
-    demo: "https://salon-neon-rho.vercel.app/",
+    demo: "https://salon.therdstudio.co.in",
   },
   {
     name: "Aura Spa & Wellness",
     category: "Spa Website",
     image: spaShot,
     features: ["Modern UI", "Online Booking", "WhatsApp Integration", "Fully Responsive"],
-    demo: "https://aura-spa-design-mauve.vercel.app/",
+    demo: "https://spa.therdstudio.co.in",
   },
   {
-  name: "Brew Haven",
-  category: "Café Website",
-  image: cafeShot,
-  features: ["Online Reservations", "Digital Menu", "Admin Dashboard", "Mobile Optimized"],
-  demo: "https://brew-heaven-nu.vercel.app/",
-}
+    name: "Brew Haven",
+    category: "Café Website",
+    image: cafeShot,
+    features: ["Online Reservations", "Digital Menu", "Admin Dashboard", "Mobile Optimized"],
+    demo: "https://cafe.therdstudio.co.in",
+  },
 ];
 
 export default function PortfolioSection() {
@@ -43,19 +45,23 @@ export default function PortfolioSection() {
           />
 
           <Reveal delay={1}>
-            <a href="#contact" className="btn-ghost">
+            <Link to="/contact" className="btn-ghost">
               Start your project
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </Reveal>
         </div>
 
         <div className="mt-16 grid gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <Reveal key={project.name} delay={index}>
-              <article className="group card-elegant overflow-hidden">
+              <SpotlightCard
+                isFeatured={index === 0}
+                enableTilt={false}
+                className="group overflow-hidden"
+              >
                 <div className="grid lg:grid-cols-5 gap-0">
-                  <div className="relative lg:col-span-3 overflow-hidden bg-background">
+                  <div className="relative lg:col-span-3 overflow-hidden bg-[#07070A]">
                     <img
                       src={project.image}
                       alt={`${project.name} — ${project.category}`}
@@ -74,7 +80,7 @@ export default function PortfolioSection() {
                     <ul className="mt-6 space-y-2.5">
                       {project.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2.5 text-sm">
-                          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent">
+                          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent border border-accent/20">
                             <Check className="h-3 w-3" />
                           </span>
 
@@ -94,13 +100,13 @@ export default function PortfolioSection() {
                         <ArrowUpRight className="h-4 w-4" />
                       </a>
 
-                      <a href="#contact" className="btn-ghost text-sm !py-2.5 !px-5">
+                      <Link to="/contact" className="btn-ghost text-sm !py-2.5 !px-5">
                         Get similar website
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </article>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>

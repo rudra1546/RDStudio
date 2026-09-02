@@ -29,30 +29,30 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-subtle: var(--subtle);
 
-  --shadow-elegant: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(15, 23, 42, 0.08);
-  --shadow-lift: 0 4px 8px rgba(15, 23, 42, 0.04), 0 24px 48px -16px rgba(15, 23, 42, 0.16);
+  --shadow-elegant: 0 2px 10px -2px rgba(0, 0, 0, 0.6), 0 8px 24px -4px rgba(0, 0, 0, 0.8);
+  --shadow-lift: 0 12px 32px -6px rgba(0, 0, 0, 0.9), 0 0 20px -5px rgba(139, 92, 246, 0.2);
 }
 
 :root {
   --radius: 0.875rem;
 
-  /* Neutral premium palette */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.02 260); /* charcoal */
-  --muted: oklch(0.97 0.005 260);
-  --muted-foreground: oklch(0.5 0.02 260); /* dark gray */
-  --subtle: oklch(0.985 0.004 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.02 260);
-  --border: oklch(0.92 0.008 260);
-  --input: oklch(0.92 0.008 260);
-  --ring: oklch(0.55 0.14 250);
+  /* Dark Futuristic Electric Violet Palette */
+  --background: #07070a; /* Obsidian Background */
+  --foreground: #f5f3ff; /* Primary Text */
+  --muted: #0d0d12; /* Secondary Background */
+  --muted-foreground: #9692a3; /* Secondary Text */
+  --subtle: #0d0d12;
+  --card: #13131a; /* Card / Surface */
+  --card-foreground: #f5f3ff;
+  --border: #24222f; /* Border */
+  --input: #24222f;
+  --ring: #8b5cf6;
 
-  /* Single accent: refined blue */
-  --primary: oklch(0.22 0.02 260); /* charcoal button */
-  --primary-foreground: oklch(0.99 0 0);
-  --accent: oklch(0.55 0.14 250); /* subtle blue accent */
-  --accent-foreground: oklch(0.99 0 0);
+  /* Electric Violet Accent */
+  --primary: #8b5cf6;
+  --primary-foreground: #ffffff;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
 }
 
 @layer base {
@@ -61,6 +61,7 @@
   }
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
   }
   body {
     background-color: var(--color-background);
@@ -91,7 +92,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -102,21 +103,25 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.4rem;
+  padding: 0.85rem 1.45rem;
   border-radius: 999px;
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #5b21b6 100%);
+  color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     background 0.25s ease;
-  box-shadow: var(--shadow-elegant);
+  box-shadow:
+    0 4px 18px -2px rgba(139, 92, 246, 0.35),
+    0 2px 6px rgba(91, 33, 182, 0.2);
   &:hover {
     transform: translateY(-1px);
-    box-shadow: var(--shadow-lift);
-    background: color-mix(in oklab, var(--color-primary) 92%, var(--color-accent));
+    box-shadow:
+      0 8px 24px -2px rgba(139, 92, 246, 0.5),
+      0 4px 10px rgba(99, 102, 241, 0.25);
+    background: linear-gradient(135deg, #a855f7 0%, #8b5cf6 50%, #6366f1 100%);
   }
 }
 
@@ -125,35 +130,47 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.4rem;
+  padding: 0.85rem 1.45rem;
   border-radius: 999px;
   border: 1px solid var(--color-border);
   color: var(--color-foreground);
   font-weight: 600;
   font-size: 0.95rem;
-  background: transparent;
+  background: rgba(19, 19, 26, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   transition:
     border-color 0.25s ease,
+    color 0.25s ease,
     background 0.25s ease,
+    box-shadow 0.25s ease,
     transform 0.25s ease;
   &:hover {
-    border-color: var(--color-foreground);
-    background: var(--color-subtle);
+    border-color: #8b5cf6;
+    color: #ffffff;
+    background: #13131a;
+    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.15);
     transform: translateY(-1px);
   }
 }
 
 @utility card-elegant {
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
+  background: linear-gradient(180deg, rgba(23, 22, 34, 0.85) 0%, rgba(19, 19, 26, 0.95) 100%);
+  border: 1px solid rgba(36, 34, 47, 0.9);
   border-radius: 1.25rem;
+  box-shadow:
+    inset 0 1px 1px 0 rgba(245, 243, 255, 0.06),
+    0 8px 30px -6px rgba(0, 0, 0, 0.7);
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
     border-color 0.35s ease;
   &:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-lift);
-    border-color: color-mix(in oklab, var(--color-accent) 30%, var(--color-border));
+    box-shadow:
+      inset 0 1px 1px 0 rgba(168, 85, 247, 0.25),
+      0 20px 40px -10px rgba(0, 0, 0, 0.85),
+      0 0 25px -4px rgba(139, 92, 246, 0.22);
+    border-color: rgba(139, 92, 246, 0.5);
   }
 }

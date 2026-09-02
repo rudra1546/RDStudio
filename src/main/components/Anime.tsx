@@ -5,10 +5,7 @@ interface GreetingAnimationProps {
   type: "success" | "error";
 }
 
-export default function GreetingAnimation({
-  show,
-  type,
-}: GreetingAnimationProps) {
+export default function GreetingAnimation({ show, type }: GreetingAnimationProps) {
   const isSuccess = type === "success";
 
   return (
@@ -29,13 +26,14 @@ export default function GreetingAnimation({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-
           <motion.div
             className="
-              bg-background
+              bg-card
+              border
+              border-border
               rounded-2xl
               p-8
-              shadow-2xl
+              shadow-[0_24px_60px_-10px_rgba(0,0,0,0.9)]
               flex
               flex-col
               items-center
@@ -62,7 +60,6 @@ export default function GreetingAnimation({
               damping: 15,
             }}
           >
-
             <motion.div
               className="flex items-center gap-3"
               animate={{
@@ -73,27 +70,29 @@ export default function GreetingAnimation({
                 repeat: Infinity,
               }}
             >
-
-              <span className="
+              <span
+                className="
                 inline-flex
                 h-14
                 w-14
                 items-center
                 justify-center
                 rounded-full
-                bg-primary
-                text-primary-foreground
+                bg-gradient-to-br
+                from-[#8B5CF6]
+                to-[#5B21B6]
+                text-white
                 text-xl
-              ">
+                shadow-md
+              "
+              >
                 ◆
               </span>
 
               <span className="text-2xl font-bold">
                 RD Studio<span className="text-accent">.</span>
               </span>
-
             </motion.div>
-
 
             <motion.h2
               className="mt-6 text-xl font-bold"
@@ -101,11 +100,8 @@ export default function GreetingAnimation({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              {isSuccess
-                ? "Message Sent!"
-                : "Something went wrong"}
+              {isSuccess ? "Message Sent!" : "Something went wrong"}
             </motion.h2>
-
 
             <motion.p
               className="text-muted-foreground mt-2"
@@ -117,10 +113,7 @@ export default function GreetingAnimation({
                 ? "Thanks for reaching out. I'll get back to you soon."
                 : "Please try again later."}
             </motion.p>
-
-
           </motion.div>
-
         </motion.div>
       )}
     </AnimatePresence>

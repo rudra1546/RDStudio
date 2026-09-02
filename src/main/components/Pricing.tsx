@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
+import SpotlightCard from "./SpotlightCard";
 
 const plans = [
   {
@@ -59,28 +61,20 @@ export default function Pricing() {
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
             <Reveal key={plan.name} delay={index}>
-              <div
-                className={`relative h-full p-8 rounded-2xl border transition-all duration-300 ${
-                  plan.popular
-                    ? "bg-foreground text-background border-foreground shadow-[0_24px_60px_-24px_rgba(15,23,42,0.35)] md:-translate-y-3"
-                    : "card-elegant"
-                }`}
+              <SpotlightCard
+                isPopular={plan.popular}
+                enableTilt={true}
+                className={`h-full p-8 ${plan.popular ? "md:-translate-y-3" : ""}`}
               >
                 {plan.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#5B21B6] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-md">
                     Most Popular
                   </span>
                 )}
 
                 <h3 className="text-xl font-semibold">{plan.name}</h3>
 
-                <p
-                  className={`mt-1 text-sm ${
-                    plan.popular ? "text-background/70" : "text-muted-foreground"
-                  }`}
-                >
-                  {plan.tagline}
-                </p>
+                <p className="mt-1 text-sm text-muted-foreground">{plan.tagline}</p>
 
                 <div className="mt-6 text-4xl font-bold tracking-tight">{plan.price}</div>
 
@@ -93,21 +87,22 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className={`mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all ${
                     plan.popular
-                      ? "bg-background text-foreground hover:bg-background/90"
-                      : "bg-primary text-primary-foreground hover:opacity-90"
+                      ? "btn-primary shadow-[0_0_20px_rgba(139,92,246,0.35)]"
+                      : "btn-ghost"
                   }`}
                 >
                   Get started
                   <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
+                </Link>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>
+
         <div className="text-center text-sm text-muted-foreground">
           Note: Domain and hosting charges are not included. Domain purchase and hosting setup will
           be provided separately based on client requirements.

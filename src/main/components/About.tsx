@@ -27,9 +27,9 @@ export default function About() {
             {bullets.map((bullet) => (
               <li
                 key={bullet}
-                className="flex items-start gap-3 rounded-xl border border-border bg-subtle/60 p-4"
+                className="flex items-start gap-3 rounded-xl border border-border bg-gradient-to-b from-[#171622] to-[#13131A] p-4 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(245,243,255,0.06)] hover:border-accent/40 hover:shadow-[0_8px_20px_-4px_rgba(139,92,246,0.15)] transition-all duration-300"
               >
-                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent border border-accent/20">
                   <Check className="h-3.5 w-3.5" />
                 </span>
 

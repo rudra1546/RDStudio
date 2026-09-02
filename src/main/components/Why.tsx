@@ -2,6 +2,7 @@ import { Headphones, Palette, Rocket, Search, Smartphone, Sparkles } from "lucid
 
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
+import SpotlightCard from "./SpotlightCard";
 
 const whys = [
   {
@@ -48,15 +49,15 @@ export default function Why() {
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {whys.map((why, index) => (
             <Reveal key={why.title} delay={index}>
-              <div className="card-elegant p-7 h-full">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <SpotlightCard enableTilt={true} className="p-7 h-full">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent border border-accent/20">
                   <why.icon className="h-5 w-5" />
                 </span>
 
                 <h3 className="mt-5 text-lg font-semibold">{why.title}</h3>
 
                 <p className="mt-2 text-sm text-muted-foreground">{why.desc}</p>
-              </div>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>

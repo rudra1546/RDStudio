@@ -42,34 +42,42 @@ export default function FAQ() {
         </div>
 
         <div className="lg:col-span-3">
-          <div className="divide-y divide-border border-t border-b border-border">
+          <div className="space-y-3">
             {faqs.map((faq, index) => {
               const isOpen = open === index;
 
               return (
                 <Reveal key={faq.q} delay={index}>
-                  <button
-                    onClick={() => setOpen(isOpen ? null : index)}
-                    className="w-full text-left py-6 flex items-start justify-between gap-6 group"
-                  >
-                    <span className="text-base md:text-lg font-semibold group-hover:text-accent transition-colors">
-                      {faq.q}
-                    </span>
-
-                    <ChevronDown
-                      className={`h-5 w-5 shrink-0 mt-1 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-accent" : "text-muted-foreground"
-                      }`}
-                    />
-                  </button>
-
                   <div
-                    className={`grid transition-all duration-300 ease-out ${
-                      isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"
-                    }`}
+                    className={`rounded-xl border transition-all duration-300 ${
+                      isOpen
+                        ? "border-accent/40 bg-gradient-to-b from-[#181726] to-[#13131A] shadow-[0_8px_24px_-4px_rgba(139,92,246,0.18),inset_0_1px_1px_rgba(245,243,255,0.08)]"
+                        : "border-border bg-gradient-to-b from-[#161522]/80 to-[#121219] hover:border-accent/30"
+                    } px-6`}
                   >
-                    <div className="overflow-hidden">
-                      <p className="text-muted-foreground max-w-prose">{faq.a}</p>
+                    <button
+                      onClick={() => setOpen(isOpen ? null : index)}
+                      className="w-full text-left py-5 flex items-start justify-between gap-6 group cursor-pointer"
+                    >
+                      <span className="text-base md:text-lg font-semibold group-hover:text-accent transition-colors">
+                        {faq.q}
+                      </span>
+
+                      <ChevronDown
+                        className={`h-5 w-5 shrink-0 mt-1 transition-transform duration-300 ${
+                          isOpen ? "rotate-180 text-accent" : "text-muted-foreground"
+                        }`}
+                      />
+                    </button>
+
+                    <div
+                      className={`grid transition-all duration-300 ease-out ${
+                        isOpen ? "grid-rows-[1fr] opacity-100 pb-5" : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
+                      </div>
                     </div>
                   </div>
                 </Reveal>

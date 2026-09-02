@@ -1,5 +1,12 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import PortfolioPage from "./main/PortfolioPage";
+import Layout from "./main/components/Layout";
+import HomePage from "./main/pages/HomePage";
+import AboutPage from "./main/pages/AboutPage";
+import ServicesPage from "./main/pages/ServicesPage";
+import ProjectsPage from "./main/pages/ProjectsPage";
+import PricingPage from "./main/pages/PricingPage";
+import FAQPage from "./main/pages/FAQPage";
+import ContactPage from "./main/pages/ContactPage";
 
 function NotFoundComponent() {
   return (
@@ -24,7 +31,15 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PortfolioPage />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
         <Route path="*" element={<NotFoundComponent />} />
       </Routes>
     </BrowserRouter>

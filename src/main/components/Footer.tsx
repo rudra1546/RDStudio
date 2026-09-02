@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FooterCol from "./FooterCol";
 
 export default function Footer() {
@@ -6,15 +7,15 @@ export default function Footer() {
       <div className="container-x">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm">
+            <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/15 border border-accent/30 text-accent text-sm shadow-sm">
                 ◆
               </span>
 
               <span>
                 RD Studio<span className="text-accent">.</span>
               </span>
-            </a>
+            </Link>
 
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Premium websites for ambitious local businesses. Designed and built by one developer
@@ -25,19 +26,22 @@ export default function Footer() {
           <FooterCol
             title="Quick Links"
             items={[
-              { label: "Home", href: "#top" },
-              { label: "About", href: "#about" },
-              { label: "FAQ", href: "#faq" },
+              { label: "Home", href: "/" },
+              { label: "About", href: "/about" },
+              { label: "Projects", href: "/projects" },
+              { label: "Pricing", href: "/pricing" },
+              { label: "FAQ", href: "/faq" },
+              { label: "Contact", href: "/contact" },
             ]}
           />
 
           <FooterCol
             title="Services"
             items={[
-              { label: "Business Websites", href: "#services" },
-              { label: "Landing Pages", href: "#services" },
-              { label: "Booking Websites", href: "#services" },
-              { label: "Redesigns", href: "#services" },
+              { label: "Business Websites", href: "/services" },
+              { label: "Landing Pages", href: "/services" },
+              { label: "Booking Websites", href: "/services" },
+              { label: "Redesigns", href: "/services" },
             ]}
           />
 
@@ -67,18 +71,13 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <span>© {new Date().getFullYear()} RD Studio. All rights reserved.</span>
           <div className="flex gap-4">
-            <a href="/privacy-policy.pdf"
-              target="_blank"
-              rel="noopener noreferrer">
+            <a href="/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">
               Privacy Policy
             </a>
-            <a href="/terms&conditions.pdf"
-              target="_blank"
-              rel="noopener noreferrer">
+            <a href="/terms&conditions.pdf" target="_blank" rel="noopener noreferrer">
               Terms & Conditions
             </a>
           </div>
-
 
           <span>Handcrafted with care.</span>
         </div>
