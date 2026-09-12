@@ -13,7 +13,7 @@ export default function Footer() {
               </span>
 
               <span>
-                RD Studio<span className="text-accent">.</span>
+                RD Studio<span className="text-accent"></span>
               </span>
             </Link>
 
