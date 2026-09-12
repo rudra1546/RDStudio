@@ -75,10 +75,10 @@ export default function AnimatedLaptop() {
             isMobile
               ? { y: [-5, 5, -5] }
               : {
-                  y: [-8, 8, -8],
-                  rotateX: [5, 3, 5],
-                  rotateY: [-3.5, -1.5, -3.5],
-                }
+                y: [-8, 8, -8],
+                rotateX: [5, 3, 5],
+                rotateY: [-3.5, -1.5, -3.5],
+              }
           }
           transition={{
             duration: 7.5,
@@ -142,7 +142,7 @@ export default function AnimatedLaptop() {
                       ◆
                     </span>
                     <span className="text-xs font-bold tracking-tight text-[#F5F3FF]">
-                      RD Studio<span className="text-accent">.</span>
+                      RD Studio<span className="text-accent"></span>
                     </span>
                   </div>
 
@@ -238,11 +238,11 @@ export default function AnimatedLaptop() {
             isMobile
               ? { y: [4, -5, 4] }
               : {
-                  y: [6, -8, 6],
-                  rotateX: [6, 4, 6],
-                  rotateY: [-6, -2, -6],
-                  scale: [1, 1.015, 1],
-                }
+                y: [6, -8, 6],
+                rotateX: [6, 4, 6],
+                rotateY: [-6, -2, -6],
+                scale: [1, 1.015, 1],
+              }
           }
           transition={{
             duration: 6,
@@ -289,7 +289,7 @@ export default function AnimatedLaptop() {
                     ◆
                   </span>
                   <span className="text-[8px] sm:text-[9px] font-bold text-white">
-                    RD Studio<span className="text-accent">.</span>
+                    RD Studio<span className="text-accent"></span>
                   </span>
                 </div>
                 <Menu className="h-2.5 w-2.5 text-[#9692A3]" />

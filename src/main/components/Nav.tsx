@@ -20,11 +20,10 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "backdrop-blur-xl bg-background/85 border-b border-border shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
-          : "bg-transparent"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
+        ? "backdrop-blur-xl bg-background/85 border-b border-border shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+        : "bg-transparent"
+        }`}
     >
       <div className="container-x flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
@@ -33,7 +32,7 @@ export default function Nav() {
           </span>
 
           <span>
-            RD Studio<span className="text-accent">.</span>
+            RD Studio<span className="text-accent"></span>
           </span>
         </Link>
 
@@ -44,10 +43,9 @@ export default function Nav() {
               to={link.href}
               end={link.href === "/"}
               className={({ isActive }) =>
-                `relative transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:transition-transform after:duration-300 ${
-                  isActive
-                    ? "text-accent font-semibold after:bg-accent after:scale-x-100"
-                    : "text-muted-foreground hover:text-foreground after:bg-accent after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100"
+                `relative transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-full after:transition-transform after:duration-300 ${isActive
+                  ? "text-accent font-semibold after:bg-accent after:scale-x-100"
+                  : "text-muted-foreground hover:text-foreground after:bg-accent after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100"
                 }`
               }
             >
@@ -82,10 +80,9 @@ export default function Nav() {
                 end={link.href === "/"}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `py-2 text-base transition-colors ${
-                    isActive
-                      ? "font-semibold text-foreground pl-2 border-l-2 border-accent"
-                      : "text-muted-foreground hover:text-foreground"
+                  `py-2 text-base transition-colors ${isActive
+                    ? "font-semibold text-foreground pl-2 border-l-2 border-accent"
+                    : "text-muted-foreground hover:text-foreground"
                   }`
                 }
               >
