@@ -58,7 +58,7 @@ export default function Footer() {
               },
               {
                 label: "Instagram",
-                href: "#",
+                href: "https://www.instagram.com/therdstudio.co.in",
               },
               {
                 label: "LinkedIn",
